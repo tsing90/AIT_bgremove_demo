@@ -1,0 +1,138 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<head>
+
+    <!-- Meta tags & title /-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AIT - 图片去背景</title>
+    <meta name="description" content="AITransformer - 图片去背景" />
+    <meta name="keywords" content="AIT,图片,去背景 " />
+
+    <!-- Favicon /-->
+    <link rel="shortcut icon" href="static/favicon.png" type="image/x-icon" /> <!-- Favicon /-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Stylesheets /-->
+    <link rel="stylesheet" href="static/gumby.css">   			<!-- Gumby Framework /-->
+    <link rel="stylesheet" href="static/style.css">   			<!-- Main stylesheet /-->
+
+</head>
+
+<body>
+<!-- Preload the Whole Page -->
+<!-- NAVIGATION ############################################### -->
+
+<div class="cbp-af-header">
+    <nav >
+        <!-- Logo -->
+        <div id="logo">
+            <a href="#"><img alt="Logo" src="static/logo.png"></a>
+        </div>
+        <!-- Links -->
+        <ul id="nav" >
+            <li><a href="https://www.linkedin.com/in/l-k-chen/">作者：陈柳青</a></li>
+            <li><a href="mailto:chen67ait@gmail.com">联系我们</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- END NAVIGATION ############################################### -->
+
+
+<!-- HEADER / FIRST SECTION ############################################### -->
+
+<section class="page1">
+
+    <!-- Huge Title centered -->
+
+    <div class="huge-title centered">
+
+        <div class="logo-phone centered"><img alt="LOGO" src="static/logo-phone.png"></div>  <!-- This Logo is only displayed on Tablet/iPhone !-->
+
+        <h1>图片<label style="color:red;">一键</label>去背景</h1>
+
+        <div class="space"></div>
+
+        <form method="post" action="http://dsd-lc2015.me.ic.ac.uk/bg_removal" enctype="multipart/form-data">
+            <div style="margin:0 0 30px 90px; color: white;" class="centered">
+                <input type="file" name="file" id="file" style="" value="选择图片" required>
+                <!--a href="#" style="color: white;">
+                    <i id="icon_upload" class="fa fa-upload" onclick="_upload()"> 选择图片</i>
+                </a-->
+            </div>
+            <input type="radio" name="choice"  style="" value="False" checked >
+            <label style="color: white; padding:0 20px 0 0;">仅保留人</label>
+            <input type="radio" name="choice"  style="" value="True">
+            <label style="color: white;">人、宠物、水杯 等</label>
+
+            <h2>
+            <input type="submit" value="一键去除" name="upload" style="margin:30px 0; width:150px; height:50px;font-size:22px;">
+            </h2>
+        </form>
+    </div>
+
+
+
+
+</section>
+
+<!-- END HEADER ############################################### -->
+
+
+<!-- BEGIN CONTAINER ############################################### -->
+
+<div id="container" class="container">
+
+    <!-- FOOTER SECTION ############################################### -->
+
+    <section class="footer">
+        <div class="row">
+            <!-- Article centered on the Page -->
+            <div class="nine columns centered">
+                <!-- Nav Footer -->
+                <!--ul>
+                    <li><a >About AITransformer</a> </li>
+                    <li> <a >Facebook</a> </li>
+                    <li> <a >Twitter</a> </li>
+                </ul-->
+
+                <!-- Title -->
+                <p class="copyright">© Copyright 2019 AITransformer. All rights reserved.</p>
+                <!-- Logo -->
+
+                <img class="logo" src="static/logo.png" alt="Logo">
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- END FOOTER SECTION ############################################### -->
+</div> <!-- end of container -->
+
+
+<!--
+<script>
+function _upload(){
+    document.getElementById('file').click();
+}
+</script>
+-->
+
+<!-- Change UA-XXXXX-X to be your site's ID -->
+<!--<script>
+  window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+</script>  -->
+
+</body>
+
+</html>
