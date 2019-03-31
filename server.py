@@ -64,16 +64,7 @@ def clicked():
         flash('Neither file nor url given for image removal !')
         return make_response(open('index.html').read())
 
-    choice = request.form['choice']
-    choice = eval(choice)
-    print(choice)
-    labels, new = inference.matting(file_path, choice)
-
-    #!!!!!!!!!!!!!!!
-    if len(np.unique(labels))==1:
-        print('failed to get segmentation!')
-        flash('No person detected in the image !')
-        return make_response(open('index.html').read())
+    inference.matting(file_path)
 
     #mat2 = inference.mat_2(file_path, mat1)
     out_path = os.path.join('static/download/', os.path.splitext(os.path.basename(filename))[0]) + '-AIT.png'

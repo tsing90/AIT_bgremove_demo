@@ -103,7 +103,7 @@ class net_F_test(nn.Module):
 
     def __init__(self):
 
-        super(net_F, self).__init__()
+        super(net_F_test, self).__init__()
 
         self.t_net = PSPNet()
         self.m_net = M_net()
@@ -112,9 +112,9 @@ class net_F_test(nn.Module):
 
         # trimap
         trimap = self.t_net(input)
-        #trimap_softmax = F.softmax(trimap, dim=1)
-        trimap_arg = torch.argmax(trimap, dim=1)  #shape: b, h, w
-        trimap_softmax = torch.eye(3)[trimap_arg.reshape(-1)].reshape(trimap.shape)
+        trimap_softmax = F.softmax(trimap, dim=1)
+        #trimap_arg = torch.argmax(trimap, dim=1)  #shape: b, h, w
+        #trimap_softmax = torch.eye(3)[trimap_arg.reshape(-1)].reshape(trimap.shape)
 
         # paper: bs, fs, us
         bg, unsure, fg = torch.split(trimap_softmax, 1, dim=1)
